@@ -1,9 +1,7 @@
-var inspect = require('util').inspect,
-    config = require('./config/start')(process.argv, process.env),
-    assemb = require('assemb'),
-    meta = assemb.start(config, ok);
+var assemb = require('assemb'),
+    config = require('./config/start')(process.argv, process.env);
 
 
-function ok(out) {
-    console.log(inspect(out, false, 8, true));
-}
+assemb.start(config, function (err, meta) {
+    console.log(require('util').inspect(meta, false, 8, true));
+});
