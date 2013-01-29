@@ -6,7 +6,7 @@ var inspect = require('util').inspect,
     meta = assemb.start(__dirname, config, ok);
 
 
-function ok(count) {
-    console.log(inspect(assemb, false, 8, true));	
+function ok(out) {
+    console.log(inspect(out, false, 8, true));	
 }
 
