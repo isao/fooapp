@@ -1,7 +1,13 @@
-var assemb = require('assemb'),
-    config = require('./config/start')(process.argv, process.env);
+var inspect = require('util').inspect,
+    locator = require('./locator'),
+    conf = {
+        paths: ['tests/fixtures/touchdown-simple'],
+        ignore: [".git", "node_modules"],
+        routes: require('./config/start-configs'),
+        actions: require('./config/start-actions')
+    };
 
 
-assemb.start(config, function (err, meta) {
-    console.log(require('util').inspect(meta, false, 8, true));
+locator.start(conf, function (err, meta) {
+    console.log(inspect(meta, false, 8, true));
 });
