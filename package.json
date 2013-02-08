@@ -4,8 +4,8 @@
   "description": "demo",
   "main": "index.js",
   "dependencies": {
-    "scanfs": "*",
-    "byway": "*"
+    "scanfs": "git://github.com:isao/scanfs.git#master",
+    "byway": "git://github.com:isao/byway.git#master"
   },
   "devDependencies": {
     "tape": "~0.2.2"
