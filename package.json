@@ -1,16 +1,17 @@
 {
   "name": "fooapp",
   "version": "0.0.0",
-  "description": "ERROR: No README.md file found!",
+  "description": "demo",
   "main": "index.js",
   "dependencies": {
-    "scanfs": "*"
+    "scanfs": "*",
+    "byway": "*"
   },
   "devDependencies": {
     "tape": "~0.2.2"
   },
   "scripts": {
-    "test": "echo 'nope' && exit 1"
+    "test": "echo nope… && exit 1"
   },
   "repository": "",
   "author": "",
