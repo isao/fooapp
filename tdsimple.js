@@ -13,8 +13,9 @@ var inspect = require('util').inspect,
     };
 
 
+// the only action
 function loadjson(pathname, propname, meta) {
-	return meta[propname] = require(pathname);
+    return meta[propname] = require(pathname);
 }
 
 function locator(conf, callback) {
