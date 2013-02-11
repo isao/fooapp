@@ -9,12 +9,16 @@ var inspect = require('util').inspect,
         routes: [
             {
                 'pattern':'/conf/:filename.json$',
-                'param': {'action':'loadjson'}
+                'param': {'action':loadjson}
             }
         ],
         actions: require('./config/start-actions')
     };
 
+
+function loadjson(pathname, propname, meta) {
+	return meta[propname] = require(pathname);
+}
 
 function locator(conf, callback) {
     var scan = new Scan(conf.ignore),
@@ -24,7 +28,7 @@ function locator(conf, callback) {
     function onfile(pathname, stat) {
         var way = byway.of(pathname);
         if(way) {
-            // invoke the action with the route params
+            // invoke the action with the route params + out
             conf.actions[way.param.action](pathname, way.parts.filename, out);
         }
     }
