@@ -4,6 +4,7 @@ var inspect = require('util').inspect,
     Byway = require('byway'),
 
     conf = {
+        // can use multiple paths, like: path/to/framework/resources etc
         paths: ['tests/fixtures/touchdown-simple'],
         ignore: ['.git', 'node_modules'],
         routes: [
