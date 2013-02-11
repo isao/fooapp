@@ -3,16 +3,13 @@ var inspect = require('util').inspect,
 
     Scan = require('scanfs'),
     Byway = require('byway'),
+
     conf = {
         paths: ['tests/fixtures/touchdown-simple'],
         ignore: ['.git', 'node_modules'],
         routes: [
-            {
-                'pattern':'/conf/:filename.json$',
-                'param': {'action':loadjson}
-            }
-        ],
-        actions: require('./config/start-actions')
+            {'pattern':'/conf/:filename.json$', 'param': {'action': loadjson}}
+        ]
     };
 
 
@@ -29,7 +26,7 @@ function locator(conf, callback) {
         var way = byway.of(pathname);
         if(way) {
             // invoke the action with the route params + out
-            conf.actions[way.param.action](pathname, way.parts.filename, out);
+            way.param.action(pathname, way.parts.filename, out);
         }
     }
 
@@ -43,7 +40,7 @@ function locator(conf, callback) {
     scan.absolutely(conf.paths);
 }
 
-
+// main //
 locator(conf, function (err, out) {
     console.log('• config metadata', inspect(out, false, 8, true));
 });
