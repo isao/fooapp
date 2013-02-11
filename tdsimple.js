@@ -7,7 +7,10 @@ var inspect = require('util').inspect,
         paths: ['tests/fixtures/touchdown-simple'],
         ignore: ['.git', 'node_modules'],
         routes: [
-            {'pattern':'/conf/:configfile.json$', 'param':{'action':'loadjson'}}
+            {
+                'pattern':'/conf/:filename.json$',
+                'param': {'action':'loadjson'}
+            }
         ],
         actions: require('./config/start-actions')
     };
@@ -21,7 +24,8 @@ function locator(conf, callback) {
     function onfile(pathname, stat) {
         var way = byway.of(pathname);
         if(way) {
-            conf.actions[way.param.action](pathname, way.parts.configfile, out);
+            // invoke the action with the route params
+            conf.actions[way.param.action](pathname, way.parts.filename, out);
         }
     }
 
