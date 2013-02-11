@@ -1,4 +1,0 @@
-var basename = require('path').basename;
-process.argv.slice(2).map(function (file) {
-	require('./' + basename(file));
-});

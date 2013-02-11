@@ -1,6 +1,0 @@
-[
-    {
-        "pattern": "/conf/:configfile.:ext$",
-        "action": "loadjson"
-    }
-]
