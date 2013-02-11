@@ -8,7 +8,6 @@
     "byway": "git://github.com:isao/byway.git#develop"
   },
   "devDependencies": {
-    "tape": "~0.2.2"
   },
   "scripts": {
     "test": "echo nope… && exit 1"
