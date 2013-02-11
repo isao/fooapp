@@ -1,5 +1,4 @@
 var inspect = require('util').inspect,
-    path = require('path'),
 
     Scan = require('scanfs'),
     Byway = require('byway'),
