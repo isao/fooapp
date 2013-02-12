@@ -16,7 +16,7 @@ function loadJson(pathname) {
 }
 
 function debug(pathname, way, out) {
-	console.log(pathname, way.parts, way.param);
+	//console.log(pathname, way.parts, way.param);
 }
 
 function appconfig(pathname, way, out) {
@@ -52,6 +52,7 @@ function other(pathname, way, out) {
 
 module.exports = {
     appconfig: appconfig,
+    mojitconfig: debug,
     staticasset: /* staticasset */debug,
     controller: /* controller */debug,
     model: /* model */debug,
