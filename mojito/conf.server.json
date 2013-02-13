@@ -1,0 +1,11 @@
+{
+	"selectors": {},
+	
+	"app": {
+		"application": {},
+		"package": {},
+		"routes": {}
+	},
+	
+	"mojits": {}
+}

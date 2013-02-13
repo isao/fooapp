@@ -1,24 +1,24 @@
-// mv to mojito dir
-// make defaults for routes, configs
 
 var inspect = require('util').inspect,
     locator = require('./lib/locator'),
-    store = require('./lib/store'),
-    //store = {},
-
+    res = {
+    	client: require('./mojito/conf.client'),
+    	server: require('./mojito/conf.server'),
+    	unmapped: []
+    },
     conf = {
-        paths: ['tests/fixtures/mojito-newsboxes'],
+        paths: ['./newsboxes'],
         ignore: ['.git', 'node_modules'],
         actions: require('./mojito/locator.actions'),
         routes: require('./mojito/locator.routes'),
     };
 
 
-process.chdir(__dirname);
-
-locator(conf, function (err, store) {
+process.chdir(__dirname + '/tests/fixtures');
+locator(conf, res, function (err, res) {
     if(err) {
-    	console.error('• errors', err);
+        console.error('• errors', err);
     }
-    console.log('• config metadata', inspect(store, false, 8, true));    	
+    console.log('• config metadata', inspect(res, false, 3, true));
+    //console.log(res);
 });
