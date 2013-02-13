@@ -19,6 +19,6 @@ locator(conf, res, function (err, res) {
     if(err) {
         console.error('• errors', err);
     }
-    console.log('• config metadata', inspect(res, false, 3, true));
+    console.log('• config metadata\n', inspect(res, false, 3, true));
     //console.log(res);
 });

@@ -3,10 +3,10 @@ module.exports = [
         'pattern': '/mojits/:mojit/:filename.json$',
         'param': {'action': 'mojitconfig'}
     },
-//     {
-//         'pattern': '/:filename.json$',
-//         'param': {'action': 'appconfig'}
-//     },
+    {
+        'pattern': '/:filename.json$',
+        'param': {'action': 'appconfig'}
+    },
 //     {
 //         'pattern': '/mojits/:mojit/controller.:selector.js$',
 //         'param': {'action': 'controller'}
