@@ -1,13 +1,11 @@
 {
-    "uris": {},
+    "resources": {},
 
-	"selectors": {},
-	
-	"configs": {
-		"yui": {}
-	},
-	
-	"mojits": {},
-	
-	"assets": {}
+    "assets": {},
+
+    "configs": {},
+
+    "mojits": {},
+
+    "selectors": {}
 }

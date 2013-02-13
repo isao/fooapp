@@ -1,11 +1,9 @@
 {
-	"selectors": {},
-	
-	"app": {
-		"application": {},
-		"package": {},
-		"routes": {}
-	},
-	
-	"mojits": {}
+    "resources": {},
+
+    "configs": {},
+
+    "mojits": {},
+
+    "selectors": {}
 }

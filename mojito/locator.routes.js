@@ -1,8 +1,8 @@
 module.exports = [
-//     {
-//         'pattern': '/mojits/:mojit/:filename.json$',
-//         'param': {'action': 'mojitconfig'}
-//     },
+    {
+        'pattern': '/mojits/:mojit/:filename.json$',
+        'param': {'action': 'mojitconfig'}
+    },
 //     {
 //         'pattern': '/:filename.json$',
 //         'param': {'action': 'appconfig'}

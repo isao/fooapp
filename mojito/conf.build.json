@@ -1,0 +1,11 @@
+{
+    "not implemented but maybe for...": [
+        "pre-compiling templates",
+        "create other cache-files",
+        "less/sass/jsmin/combing"
+    ],
+
+    "could be other conf files for": [
+        "deploy-general, screwdriver, manhattan, unit testing"
+    ]
+}
