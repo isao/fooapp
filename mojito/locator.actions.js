@@ -68,7 +68,7 @@ function noop(pathname, way, res) {
 
 module.exports = {
     appconfig: appconfig,
-    mojitconfig: noop,
+    mojitconfig: mojitconfig,
     staticasset: staticasset,
     controller: noop,//controller,
     model: noop,//model,
