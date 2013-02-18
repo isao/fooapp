@@ -1,4 +1,14 @@
+// assets
+// middleware
+// mojits
+//   configs, models, views, controllers, binders
+// appconfigs
+
 module.exports = [
+    {
+        'pattern': '/mojits/:mojit/:filename.json$',
+        'param': {'action': 'mojitconfig'}
+    },
     {
         'pattern': '/mojits/:mojit/:filename.json$',
         'param': {'action': 'mojitconfig'}
